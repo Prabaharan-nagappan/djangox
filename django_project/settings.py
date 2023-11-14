@@ -79,15 +79,27 @@ DATABASES = {
 }
 
 # For Docker/PostgreSQL usage uncomment this and comment the DATABASES config above
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "postgres",
+#         "USER": "postgres",
+#         "PASSWORD": "postgres",
+#         "HOST": "db",  # set in docker-compose.yml
+#         "PORT": 5432,  # default postgres port
+#     }
+# }
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "postgres",
-        "HOST": "db",  # set in docker-compose.yml
-        "PORT": 5432,  # default postgres port
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'database',
+    'USER': 'prabaharan.nagappan',
+    'PASSWORD': 'O9WsjIrY5ATU',
+    'HOST': 'ep-polished-violet-49275139-pooler.ap-southeast-1.aws.neon.tech',
+    'PORT': '5432',
+    'OPTIONS': {'sslmode': 'require'},
+  }
 }
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
